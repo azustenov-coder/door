@@ -419,33 +419,180 @@ a {
     height: 250px !important;
   }
 
-  /* Premium Door Solutions Mobile Fixes */
-  section[style*="paddingBottom: 100px"] {
-    padding-bottom: 60px !important;
+/* Innovative Slider Section */
+.innovative-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.innovative-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+}
+
+.innovative-slide.active {
+  position: relative;
+  opacity: 1;
+  z-index: 1;
+}
+
+.innovative-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  min-height: 400px;
+  object-fit: cover;
+}
+
+.innovative-content-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.innovative-text-box {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
+  max-width: 600px;
+  pointer-events: auto;
+}
+
+.innovative-text-box h3 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.innovative-text-box p {
+  font-size: 18px;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.innovative-dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  z-index: 10;
+}
+
+.innovative-dots .dot {
+  width: 14px;
+  height: 14px;
+  borderRadius: 50%;
+  border: 2px solid white;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.innovative-dots .dot.active {
+  background-color: white;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 70px;
   }
 
-  div[style*="height: auto"] > div:first-of-type {
-    align-items: flex-end !important; /* Move text to bottom */
-    padding-bottom: 30px !important;
+  .header-inner {
+    padding: 0 20px;
   }
 
-  div[style*="backgroundColor: rgba(0,0,0,0.4)"] {
-    padding: 20px !important;
+  .logo {
+    font-size: 20px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .hero {
+    height: calc(100vh - var(--header-height));
+    align-items: flex-end;
+    padding-bottom: 60px;
+  }
+
+  .hero-content {
+    text-align: left;
+    padding: 0 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .hero-btn {
+    padding: 14px 30px;
+    font-size: 13px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 60px 20px;
+  }
+
+  .feature img {
+    height: 250px !important;
+  }
+
+  /* Innovative Slider Mobile Fixes */
+  .innovative-image {
+    min-height: 500px; /* Increase height on mobile to show more image */
+  }
+
+  .innovative-content-overlay {
+    align-items: flex-end;
+    padding-bottom: 80px;
+  }
+
+  .innovative-text-box {
+    padding: 20px;
     margin: 0 10px;
-    background-color: rgba(0,0,0,0.5) !important;
-    backdrop-filter: blur(4px) !important;
-    width: auto !important;
-    max-width: none !important;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    max-width: none;
   }
 
-  div[style*="backgroundColor: rgba(0,0,0,0.4)"] h3 {
-    font-size: 20px !important;
-    margin-bottom: 8px !important;
+  .innovative-text-box h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
   }
 
-  div[style*="backgroundColor: rgba(0,0,0,0.4)"] p {
-    font-size: 13px !important;
-    line-height: 1.4 !important;
+  .innovative-text-box p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  .innovative-dots {
+    bottom: 20px;
   }
 }
 

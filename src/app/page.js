@@ -85,51 +85,22 @@ export default function HomePage() {
           </h2>
         </div>
         
-        <div style={{ 
-          position: "relative", 
-          width: "100%",
-          overflow: "hidden"
-        }}>
+        <div className="innovative-slider">
           {sectionSlides.map((slide, index) => (
             <div
               key={index}
-              style={{
-                position: index === currentSectionSlide ? "relative" : "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                opacity: index === currentSectionSlide ? 1 : 0,
-                transition: "opacity 1s ease-in-out",
-                zIndex: index === currentSectionSlide ? 1 : 0
-              }}
+              className={`innovative-slide ${index === currentSectionSlide ? 'active' : ''}`}
             >
               <img 
                 src={slide} 
                 alt="Innovative System" 
-                style={{ width: "100%", height: "auto", display: "block" }}
+                className="innovative-image"
               />
-              <div style={{ 
-                position: "absolute",
-                inset: 0,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                pointerEvents: "none"
-              }}>
+              <div className="innovative-content-overlay">
                 <div className="container">
-                  <div style={{ 
-                    color: "white", 
-                    backgroundColor: "rgba(0,0,0,0.4)", 
-                    padding: "40px",
-                    backdropFilter: "blur(8px)",
-                    borderRadius: "8px",
-                    maxWidth: "600px",
-                    pointerEvents: "auto"
-                  }}>
-                    <h3 style={{ fontSize: "32px", marginBottom: "15px", fontWeight: "700" }}>{t("home", "innovativeSystems")}</h3>
-                    <p style={{ fontSize: "18px", opacity: 0.9, lineHeight: "1.6" }}>
-                      {t("home", "innovativeDesc")}
-                    </p>
+                  <div className="innovative-text-box">
+                    <h3>{t("home", "innovativeSystems")}</h3>
+                    <p>{t("home", "innovativeDesc")}</p>
                   </div>
                 </div>
               </div>
@@ -137,28 +108,12 @@ export default function HomePage() {
           ))}
           
           {/* Navigation Dots */}
-          <div style={{ 
-            position: "absolute", 
-            bottom: "30px", 
-            left: "50%", 
-            transform: "translateX(-50%)", 
-            display: "flex", 
-            gap: "15px", 
-            zIndex: 10 
-          }}>
+          <div className="innovative-dots">
             {sectionSlides.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentSectionSlide(index)}
-                style={{
-                  width: "14px",
-                  height: "14px",
-                  borderRadius: "50%",
-                  border: "2px solid white",
-                  backgroundColor: index === currentSectionSlide ? "white" : "transparent",
-                  cursor: "pointer",
-                  transition: "all 0.3s ease"
-                }}
+                className={`dot ${index === currentSectionSlide ? 'active' : ''}`}
               />
             ))}
           </div>
