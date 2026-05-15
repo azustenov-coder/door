@@ -51,7 +51,7 @@ export default function AccessoriesPage() {
           <Reveal delay={0.4}>
             <div className="accessory-card" style={{ background: "#fcfcfc", borderRadius: "12px", overflow: "hidden", border: "1px solid #eee", transition: "transform 0.3s ease" }}>
               <div style={{ height: "400px", overflow: "hidden", background: "#f0f0f0" }}>
-                <img src="/images/ruchkaa.png" alt="Handles" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                <img src="/images/handle.png" alt="Handles" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
               </div>
               <div style={{ padding: "40px" }}>
                 <h3 style={{ marginBottom: "15px", fontSize: "24px", fontWeight: "600" }}>{t("products", "handles")}</h3>
