@@ -83,11 +83,11 @@ export default function MasonryGallery() {
 
   return (
     <div>
-      <div className="filter-section" style={{ marginBottom: "30px" }}>
+      <div className="filter-section">
         <h3 style={{ fontSize: "13px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "20px", color: "var(--text-secondary)" }}>
           {t("filters", "title")}
         </h3>
-        <ul className="filter-list" style={{ display: "flex", gap: "20px", listStyle: "none" }}>
+        <ul className="filter-list">
           <li>
             <button className={`filter-btn ${filter === "all" ? "active" : ""}`} onClick={() => setFilter("all")}>{t("filters", "all")}</button>
           </li>
