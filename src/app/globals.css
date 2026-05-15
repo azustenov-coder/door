@@ -418,8 +418,9 @@ a {
   .feature img {
     height: 250px !important;
   }
+}
 
-/* Innovative Slider Section */
+/* Innovative Slider Section - Global Styles (Desktop First) */
 .innovative-slider {
   position: relative;
   width: 100%;
@@ -495,7 +496,7 @@ a {
 .innovative-dots .dot {
   width: 14px;
   height: 14px;
-  borderRadius: 50%;
+  border-radius: 50%;
   border: 2px solid white;
   background-color: transparent;
   cursor: pointer;
@@ -507,63 +508,8 @@ a {
   background-color: white;
 }
 
+/* Innovative Slider - Mobile Specific Styles */
 @media (max-width: 768px) {
-  :root {
-    --header-height: 70px;
-  }
-
-  .header-inner {
-    padding: 0 20px;
-  }
-
-  .logo {
-    font-size: 20px;
-  }
-
-  .container {
-    padding: 0 20px;
-  }
-
-  .hero {
-    height: calc(100vh - var(--header-height));
-    align-items: flex-end;
-    padding-bottom: 60px;
-  }
-
-  .hero-content {
-    text-align: left;
-    padding: 0 20px;
-  }
-
-  .hero-content h1 {
-    font-size: 32px;
-    margin-bottom: 15px;
-    letter-spacing: -1px;
-  }
-
-  .hero-content p {
-    font-size: 16px;
-    margin-bottom: 30px;
-  }
-
-  .hero-btn {
-    padding: 14px 30px;
-    font-size: 13px;
-    width: 100%;
-    text-align: center;
-  }
-
-  .features {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    padding: 60px 20px;
-  }
-
-  .feature img {
-    height: 250px !important;
-  }
-
-  /* Innovative Slider Mobile Fixes */
   .innovative-image {
     min-height: 500px; /* Increase height on mobile to show more image */
   }
