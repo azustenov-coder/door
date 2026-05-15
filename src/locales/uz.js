@@ -66,5 +66,11 @@ export const uz = {
     p6: "Shaxsiy Rezidensiya",
     p7: "Minimalist Kvartira",
     p8: "IT Xab Bosh Qarorgohi"
+  },
+  beforeAfter: {
+    title: "Makoningizni o'zgartiring",
+    subtitle: "Standart eshiklarni bizning yashirin tizimlarimiz bilan solishtiring va minimalist farqni ko'ring.",
+    before: "Standart eshik",
+    after: "Yashirin tizim"
   }
 };

@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/context/LanguageContext";
+import Reveal from "@/components/Reveal";
+import BeforeAfter from "@/components/BeforeAfter";
 
 export default function HomePage() {
   const { t, mounted } = useLanguage();
@@ -34,90 +36,106 @@ export default function HomePage() {
         <div className="hero-overlay"></div>
         
         <div className="container">
-          <div className="hero-content">
-            <h1>{t("home", "heroTitle")}</h1>
-            <p>{t("home", "heroSubtitle")}</p>
-            <button className="hero-btn">
-              {t("content", "learnMore")}
-            </button>
-          </div>
+          <Reveal>
+            <div className="hero-content">
+              <h1>{t("home", "heroTitle")}</h1>
+              <p>{t("home", "heroSubtitle")}</p>
+              <button className="hero-btn">
+                {t("content", "learnMore")}
+              </button>
+            </div>
+          </Reveal>
         </div>
       </section>
 
       <section className="container" style={{ paddingTop: '80px', paddingBottom: '80px' }}>
         <div className="features">
-          <div className="feature">
-            <img 
-              src="/images/minimalizm.jpg" 
-              alt="Minimalist Design - Interior" 
-              style={{ width: "100%", height: "350px", objectFit: "cover", marginBottom: "25px", borderRadius: "4px" }}
-            />
-            <h3>{t("home", "feature1")}</h3>
-            <p>{t("home", "feature1Desc")}</p>
-          </div>
-          <div className="feature">
-            <div style={{ width: "100%", height: "350px", overflow: "hidden", marginBottom: "25px", borderRadius: "4px", background: "#f9f9f9", display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <Reveal delay={0.2}>
+            <div className="feature">
               <img 
-                src="/images/alimin.png" 
-                alt="Technical Quality - Aluminum Profiles" 
-                style={{ width: "100%", height: "100%", objectFit: "contain" }}
+                src="/images/minimalizm.jpg" 
+                alt="Minimalist Design - Interior" 
+                style={{ width: "100%", height: "350px", objectFit: "cover", marginBottom: "25px", borderRadius: "4px" }}
               />
+              <h3>{t("home", "feature1")}</h3>
+              <p>{t("home", "feature1Desc")}</p>
             </div>
-            <h3>{t("home", "feature2")}</h3>
-            <p>{t("home", "feature2Desc")}</p>
-          </div>
-          <div className="feature">
-            <img 
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" 
-              alt="Individual" 
-              style={{ width: "100%", height: "350px", objectFit: "cover", marginBottom: "25px", borderRadius: "4px" }}
-            />
-            <h3>{t("home", "feature3")}</h3>
-            <p>{t("home", "feature3Desc")}</p>
-          </div>
+          </Reveal>
+          <Reveal delay={0.4}>
+            <div className="feature">
+              <div style={{ width: "100%", height: "350px", overflow: "hidden", marginBottom: "25px", borderRadius: "4px", background: "#f9f9f9", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <img 
+                  src="/images/alimin.png" 
+                  alt="Technical Quality - Aluminum Profiles" 
+                  style={{ width: "100%", height: "100%", objectFit: "contain" }}
+                />
+              </div>
+              <h3>{t("home", "feature2")}</h3>
+              <p>{t("home", "feature2Desc")}</p>
+            </div>
+          </Reveal>
+          <Reveal delay={0.6}>
+            <div className="feature">
+              <img 
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" 
+                alt="Individual" 
+                style={{ width: "100%", height: "350px", objectFit: "cover", marginBottom: "25px", borderRadius: "4px" }}
+              />
+              <h3>{t("home", "feature3")}</h3>
+              <p>{t("home", "feature3Desc")}</p>
+            </div>
+          </Reveal>
         </div>
       </section>
 
+      <Reveal>
+        <BeforeAfter />
+      </Reveal>
+
       <section style={{ paddingBottom: "100px" }}>
-        <div className="container">
-          <h2 style={{ fontSize: "32px", marginBottom: "40px", fontWeight: "600", textAlign: "center" }}>
-            {t("home", "premiumSolutions")}
-          </h2>
-        </div>
+        <Reveal>
+          <div className="container">
+            <h2 style={{ fontSize: "32px", marginBottom: "40px", fontWeight: "600", textAlign: "center" }}>
+              {t("home", "premiumSolutions")}
+            </h2>
+          </div>
+        </Reveal>
         
-        <div className="innovative-slider">
-          {sectionSlides.map((slide, index) => (
-            <div
-              key={index}
-              className={`innovative-slide ${index === currentSectionSlide ? 'active' : ''}`}
-            >
-              <img 
-                src={slide} 
-                alt="Innovative System" 
-                className="innovative-image"
-              />
-              <div className="innovative-content-overlay">
-                <div className="container">
-                  <div className="innovative-text-box">
-                    <h3>{t("home", "innovativeSystems")}</h3>
-                    <p>{t("home", "innovativeDesc")}</p>
+        <Reveal>
+          <div className="innovative-slider">
+            {sectionSlides.map((slide, index) => (
+              <div
+                key={index}
+                className={`innovative-slide ${index === currentSectionSlide ? 'active' : ''}`}
+              >
+                <img 
+                  src={slide} 
+                  alt="Innovative System" 
+                  className="innovative-image"
+                />
+                <div className="innovative-content-overlay">
+                  <div className="container">
+                    <div className="innovative-text-box">
+                      <h3>{t("home", "innovativeSystems")}</h3>
+                      <p>{t("home", "innovativeDesc")}</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
-          
-          {/* Navigation Dots */}
-          <div className="innovative-dots">
-            {sectionSlides.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSectionSlide(index)}
-                className={`dot ${index === currentSectionSlide ? 'active' : ''}`}
-              />
             ))}
+            
+            {/* Navigation Dots */}
+            <div className="innovative-dots">
+              {sectionSlides.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSectionSlide(index)}
+                  className={`dot ${index === currentSectionSlide ? 'active' : ''}`}
+                />
+              ))}
+            </div>
           </div>
-        </div>
+        </Reveal>
       </section>
     </div>
   );

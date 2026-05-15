@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/context/LanguageContext";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function MasonryGallery() {
   const [filter, setFilter] = useState("all");
@@ -99,23 +100,34 @@ export default function MasonryGallery() {
         </ul>
       </div>
 
-      <div className="masonry-grid">
-        {filteredProjects.map((project, index) => (
-          <div
-            key={project.id}
-            className="grid-item"
-            onClick={() => openLightbox(index)}
-          >
-            <img src={project.imgUrl} alt={t("projects", project.titleKey)} loading="lazy" />
-            <div className="item-overlay">
-              <span className="item-category">
-                {t("categories", project.category)}
-              </span>
-              <h4 className="item-title">{t("projects", project.titleKey)}</h4>
-            </div>
-          </div>
-        ))}
-      </div>
+      <motion.div 
+        layout
+        className="masonry-grid"
+      >
+        <AnimatePresence mode="popLayout">
+          {filteredProjects.map((project, index) => (
+            <motion.div
+              layout
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.4 }}
+              key={project.id}
+              className="grid-item"
+              onClick={() => openLightbox(index)}
+              whileHover={{ y: -10 }}
+            >
+              <img src={project.imgUrl} alt={t("projects", project.titleKey)} loading="lazy" />
+              <div className="item-overlay">
+                <span className="item-category">
+                  {t("categories", project.category)}
+                </span>
+                <h4 className="item-title">{t("projects", project.titleKey)}</h4>
+              </div>
+            </motion.div>
+          ))}
+        </AnimatePresence>
+      </motion.div>
 
       <div className={`lightbox ${lightboxOpen ? "active" : ""}`} onClick={closeLightbox}>
         <button className="lightbox-close" onClick={closeLightbox}>&times;</button>

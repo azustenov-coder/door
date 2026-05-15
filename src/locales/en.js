@@ -66,5 +66,11 @@ export const en = {
     p6: "Private Residence",
     p7: "Minimalist Apartment",
     p8: "IT Hub Headquarters"
+  },
+  beforeAfter: {
+    title: "Transform Your Space",
+    subtitle: "Compare standard doors with our hidden systems to see the minimalist difference.",
+    before: "Standard Door",
+    after: "Invisible System"
   }
 };
