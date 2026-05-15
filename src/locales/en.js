@@ -37,11 +37,15 @@ export const en = {
     silentMotion: "Silent Motion",
     silentMotionDesc: "High-quality rollers ensure a smooth and completely silent operation for years to come.",
     handles: "Handles",
-    handlesDesc: "Minimalist Italian design handles.",
-    hinges: "Hinges",
-    hingesDesc: "3D adjustable hidden hinges.",
-    locks: "Locks",
-    locksDesc: "Magnetic and secure locking systems."
+    handlesDesc: "Premium minimalist handles with ergonomic design. Available in black, chrome, and matte gold finishes to match your interior.",
+    hinges: "Hidden Hinges",
+    hingesDesc: "3D adjustable hidden hinges that ensure smooth opening and perfect door alignment with the wall surface.",
+    locks: "Magnetic Locks",
+    locksDesc: "Innovative magnetic lock systems for silent and effortless closing. No visible striking plate on the frame.",
+    thresholds: "Automatic Thresholds",
+    thresholdsDesc: "Drop-down seal system that provides superior sound insulation and prevents drafts, dust, and odors from entering.",
+    closers: "Hidden Closers",
+    closersDesc: "Integrated door closing systems that are completely invisible when the door is closed, ensuring safety and comfort."
   },
   filters: {
     title: "Project Filters",

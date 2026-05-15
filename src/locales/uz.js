@@ -37,11 +37,15 @@ export const uz = {
     silentMotion: "Ovozsiz harakat",
     silentMotionDesc: "Yuqori sifatli roliklar yillar davomida silliq va mutlaqo ovozsiz ishlashni ta'minlaydi.",
     handles: "Tutqichlar",
-    handlesDesc: "Minimalistik italyancha dizayndagi tutqichlar.",
-    hinges: "Ilgaklar",
-    hingesDesc: "3D sozlanadigan yashirin ilgaklar.",
-    locks: "Qulflar",
-    locksDesc: "Magnitli va xavfsiz qulflash tizimlari."
+    handlesDesc: "Ergonomik dizayndagi premium minimalist tutqichlar. Interyeringizga mos keladigan qora, xrom va mat oltin ranglarda mavjud.",
+    hinges: "Yashirin ilgaklar",
+    hingesDesc: "3D sozlanadigan yashirin ilgaklar, ular eshikning silliq ochilishini va devor yuzasi bilan mukammal tekisligini ta'minlaydi.",
+    locks: "Magnit qulflar",
+    locksDesc: "Ovozsiz va oson yopilish uchun innovatsion magnit qulflash tizimlari. Ramkada ko'rinadigan metall plastinka yo'q.",
+    thresholds: "Avtomatik ostonalar",
+    thresholdsDesc: "Ovoz izolatsiyasini ta'minlaydigan va xonaga chang, hid va shamol kirishini oldini oluvchi tushuvchi zichlagich tizimi.",
+    closers: "Yashirin yopgichlar",
+    closersDesc: "Eshik yopilganda mutlaqo ko'rinmaydigan, xavfsizlik va qulaylikni ta'minlaydigan o'rnatilgan yopish tizimlari."
   },
   filters: {
     title: "Loyiha filtrlari",
