@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Invisible Door Systems",
+  title: "Uniodoors",
   description: "Premium hidden door systems",
 };
 

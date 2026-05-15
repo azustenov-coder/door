@@ -21,7 +21,7 @@ export default function Header() {
   if (!mounted) return (
     <header className="header">
       <div className="header-inner">
-        <div className="logo"><strong>Invisible</strong> Doors</div>
+        <div className="logo"><strong>Unio</strong>doors</div>
       </div>
     </header>
   );
@@ -30,7 +30,7 @@ export default function Header() {
     <header className="header">
       <div className="header-inner">
         <Link href="/" className="logo">
-          <strong>Invisible</strong> Doors
+          <strong>Unio</strong>doors
         </Link>
 
         <nav className="top-nav">
