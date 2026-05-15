@@ -24,48 +24,54 @@ export default function SlidingDoorsPage() {
         </Reveal>
 
         <Reveal delay={0.2}>
-          <div style={{ marginBottom: "80px", borderRadius: "12px", overflow: "hidden", boxShadow: "0 30px 60px rgba(0,0,0,0.12)", position: "relative" }}>
+          <div style={{ marginBottom: "80px", borderRadius: "12px", overflow: "hidden", boxShadow: "0 30px 60px rgba(0,0,0,0.12)" }}>
             <img 
-              src="/images/suriladigan.png" 
-              alt="Sliding Door System - Technical and Interior" 
-              style={{ width: "100%", height: "auto", display: "block" }}
+              src="/images/sliding_interior.png" 
+              alt="Sliding Door Interior" 
+              style={{ width: "100%", height: "600px", objectFit: "cover", display: "block" }}
             />
-            {/* CSS Patch to hide the sparkle - adjusted for new layout */}
-            <div style={{
-              position: "absolute",
-              bottom: "12%",
-              right: "8%",
-              width: "80px",
-              height: "80px",
-              backgroundColor: "#d8c9bc",
-              backgroundImage: "url('/images/suriladigan.png')",
-              backgroundPosition: "bottom 12% right 20%",
-              backgroundSize: "1200% auto",
-              filter: "blur(3px)",
-              borderRadius: "50%",
-              opacity: 0.95
-            }}></div>
           </div>
         </Reveal>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px", marginBottom: "80px" }}>
-          <Reveal delay={0.3}>
-            <div style={{ padding: "40px", background: "#fcfcfc", borderRadius: "12px", border: "1px solid #eee" }}>
-              <h3 style={{ fontSize: "24px", fontWeight: "600", marginBottom: "20px" }}>{t("products", "spaceSaving")}</h3>
-              <p style={{ color: "var(--text-secondary)", fontSize: "16px", lineHeight: "1.7" }}>
-                {t("products", "spaceSavingDesc")}
-              </p>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "60px", alignItems: "center", marginBottom: "100px" }}>
+          <Reveal>
+            <h2 style={{ fontSize: "32px", fontWeight: "600", marginBottom: "20px" }}>{t("products", "slidingInWall")}</h2>
+            <p style={{ fontSize: "18px", color: "var(--text-secondary)", lineHeight: "1.7", marginBottom: "30px" }}>
+              {t("products", "slidingInWallDesc")}
+            </p>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px" }}>
+              <div style={{ padding: "20px", background: "#f9f9f9", borderRadius: "8px" }}>
+                <h4 style={{ fontSize: "16px", marginBottom: "10px" }}>{t("products", "spaceSaving")}</h4>
+                <p style={{ fontSize: "14px", opacity: 0.7 }}>100% foydali maydon</p>
+              </div>
+              <div style={{ padding: "20px", background: "#f9f9f9", borderRadius: "8px" }}>
+                <h4 style={{ fontSize: "16px", marginBottom: "10px" }}>{t("products", "silentMotion")}</h4>
+                <p style={{ fontSize: "14px", opacity: 0.7 }}>Ovozsiz tizim</p>
+              </div>
             </div>
           </Reveal>
-          <Reveal delay={0.4}>
-            <div style={{ padding: "40px", background: "#fcfcfc", borderRadius: "12px", border: "1px solid #eee" }}>
-              <h3 style={{ fontSize: "24px", fontWeight: "600", marginBottom: "20px" }}>{t("products", "silentMotion")}</h3>
-              <p style={{ color: "var(--text-secondary)", fontSize: "16px", lineHeight: "1.7" }}>
-                {t("products", "silentMotionDesc")}
-              </p>
-            </div>
+          <Reveal delay={0.3}>
+            <img 
+              src="/images/cassette.png" 
+              alt="Cassette System Detail" 
+              style={{ width: "100%", height: "auto", borderRadius: "12px", boxShadow: "0 10px 30px rgba(0,0,0,0.05)" }}
+            />
           </Reveal>
         </div>
+
+        <Reveal>
+          <div style={{ background: "#000", color: "#fff", padding: "80px", borderRadius: "24px", marginBottom: "80px", textAlign: "center" }}>
+            <h2 style={{ fontSize: "40px", marginBottom: "20px" }}>{t("products", "slidingOnWall")}</h2>
+            <p style={{ fontSize: "18px", opacity: 0.8, maxWidth: "700px", margin: "0 auto 40px" }}>
+              {t("products", "slidingOnWallDesc")}
+            </p>
+            <img 
+              src="/images/suriladigan.png" 
+              alt="Sliding System" 
+              style={{ width: "100%", maxHeight: "500px", objectFit: "contain" }}
+            />
+          </div>
+        </Reveal>
       </section>
 
       <CTA />
