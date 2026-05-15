@@ -18,7 +18,7 @@ export default function CTA() {
             {t("cta", "subtitle")}
           </p>
           <div style={{ display: "flex", gap: "20px", justifyContent: "center", marginBottom: "60px" }}>
-            <a href="https://t.me/azizbek_door" target="_blank" rel="noopener noreferrer" className="hero-btn" style={{ background: "#0088cc", color: "#fff" }}>
+            <a href="https://t.me/Uniodoors_bot" target="_blank" rel="noopener noreferrer" className="hero-btn" style={{ background: "#0088cc", color: "#fff" }}>
               {t("cta", "button1")}
             </a>
             <a href="tel:+998901234567" className="hero-btn" style={{ border: "1px solid #000", background: "transparent", color: "#000" }}>
