@@ -49,7 +49,11 @@ export const uz = {
     thresholds: "Avtomatik ostonalar",
     thresholdsDesc: "Ovoz izolatsiyasini ta'minlaydigan va xonaga chang, hid va shamol kirishini oldini oluvchi tushuvchi zichlagich tizimi.",
     closers: "Yashirin yopgichlar",
-    closersDesc: "Eshik yopilganda mutlaqo ko'rinmaydigan, xavfsizlik va qulaylikni ta'minlaydigan o'rnatilgan yopish tizimlari."
+    closersDesc: "Eshik yopilganda mutlaqo ko'rinmaydigan, xavfsizlik va qulaylikni ta'minlaydigan o'rnatilgan yopish tizimlari.",
+    technicalBadge: "Yashirin Tizim",
+    premiumQuality: "Premium Sifat",
+    usableArea: "100% foydali maydon",
+    silentSystem: "Ovozsiz tizim"
   },
   filters: {
     title: "Loyiha filtrlari",

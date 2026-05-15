@@ -39,8 +39,8 @@ export default function SwingDoorsPage() {
                 style={{ width: "100%", height: "600px", objectFit: "cover", borderRadius: "12px", boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
               />
               <div className="img-badge" style={{ position: "absolute", bottom: "-30px", left: "-30px", padding: "30px", background: "#000", color: "#fff", borderRadius: "8px", maxWidth: "200px" }}>
-                <p style={{ fontSize: "14px", fontWeight: "600" }}>Invisible Swing Tizimi</p>
-                <p style={{ fontSize: "12px", opacity: 0.7 }}>Premium Sifat</p>
+                <p style={{ fontSize: "14px", fontWeight: "600" }}>{t("products", "technicalBadge")}</p>
+                <p style={{ fontSize: "12px", opacity: 0.7 }}>{t("products", "premiumQuality")}</p>
               </div>
             </div>
           </Reveal>

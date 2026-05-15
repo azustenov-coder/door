@@ -49,7 +49,11 @@ export const en = {
     thresholds: "Automatic Thresholds",
     thresholdsDesc: "Drop-down seal system that provides superior sound insulation and prevents drafts, dust, and odors from entering.",
     closers: "Hidden Closers",
-    closersDesc: "Integrated door closing systems that are completely invisible when the door is closed, ensuring safety and comfort."
+    closersDesc: "Integrated door closing systems that are completely invisible when the door is closed, ensuring safety and comfort.",
+    technicalBadge: "Invisible System",
+    premiumQuality: "Premium Quality",
+    usableArea: "100% Usable Area",
+    silentSystem: "Silent System"
   },
   filters: {
     title: "Project Filters",

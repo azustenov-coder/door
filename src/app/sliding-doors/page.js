@@ -42,11 +42,11 @@ export default function SlidingDoorsPage() {
             <div className="product-features-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px" }}>
               <div style={{ padding: "20px", background: "#f9f9f9", borderRadius: "8px" }}>
                 <h4 style={{ fontSize: "16px", marginBottom: "10px" }}>{t("products", "spaceSaving")}</h4>
-                <p style={{ fontSize: "14px", opacity: 0.7 }}>100% foydali maydon</p>
+                <p style={{ fontSize: "14px", opacity: 0.7 }}>{t("products", "usableArea")}</p>
               </div>
               <div style={{ padding: "20px", background: "#f9f9f9", borderRadius: "8px" }}>
                 <h4 style={{ fontSize: "16px", marginBottom: "10px" }}>{t("products", "silentMotion")}</h4>
-                <p style={{ fontSize: "14px", opacity: 0.7 }}>Ovozsiz tizim</p>
+                <p style={{ fontSize: "14px", opacity: 0.7 }}>{t("products", "silentSystem")}</p>
               </div>
             </div>
           </Reveal>
