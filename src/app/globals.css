@@ -662,6 +662,7 @@ a {
 .filter-list {
   justify-content: center;
   padding: 0;
+  list-style: none;
 }
 
 .filter-btn {
