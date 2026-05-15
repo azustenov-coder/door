@@ -72,5 +72,11 @@ export const en = {
     subtitle: "Compare standard doors with our hidden systems to see the minimalist difference.",
     before: "Standard Door",
     after: "Invisible System"
+  },
+  cta: {
+    title: "Ready to Start Your Project?",
+    subtitle: "Contact our experts today for a free consultation and personalized quote.",
+    button1: "Telegram",
+    button2: "Call Now"
   }
 };

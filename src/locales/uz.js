@@ -72,5 +72,11 @@ export const uz = {
     subtitle: "Standart eshiklarni bizning yashirin tizimlarimiz bilan solishtiring va minimalist farqni ko'ring.",
     before: "Standart eshik",
     after: "Yashirin tizim"
+  },
+  cta: {
+    title: "Loyihangizni boshlashga tayyormisiz?",
+    subtitle: "Bepul maslahat va shaxsiy narx taklifini olish uchun bugun mutaxassislarimiz bilan bog'laning.",
+    button1: "Telegram",
+    button2: "Hozir qo'ng'iroq qiling"
   }
 };
