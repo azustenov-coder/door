@@ -55,6 +55,7 @@ export default function HomePage() {
               <img 
                 src="/images/minimalizm.jpg" 
                 alt="Minimalist Design - Interior" 
+                className="feature-img"
                 style={{ width: "100%", height: "350px", objectFit: "cover", marginBottom: "25px", borderRadius: "4px" }}
               />
               <h3>{t("home", "feature1")}</h3>
@@ -63,7 +64,7 @@ export default function HomePage() {
           </Reveal>
           <Reveal delay={0.4}>
             <div className="feature">
-              <div style={{ width: "100%", height: "350px", overflow: "hidden", marginBottom: "25px", borderRadius: "4px", background: "#f9f9f9", display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <div className="feature-img-container" style={{ width: "100%", height: "350px", overflow: "hidden", marginBottom: "25px", borderRadius: "4px", background: "#f9f9f9", display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <img 
                   src="/images/alimin.png" 
                   alt="Technical Quality - Aluminum Profiles" 
@@ -79,6 +80,7 @@ export default function HomePage() {
               <img 
                 src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" 
                 alt="Individual" 
+                className="feature-img"
                 style={{ width: "100%", height: "350px", objectFit: "cover", marginBottom: "25px", borderRadius: "4px" }}
               />
               <h3>{t("home", "feature3")}</h3>

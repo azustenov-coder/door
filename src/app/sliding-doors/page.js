@@ -33,13 +33,13 @@ export default function SlidingDoorsPage() {
           </div>
         </Reveal>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "60px", alignItems: "center", marginBottom: "100px" }}>
+        <div className="product-intro-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "60px", alignItems: "center", marginBottom: "100px" }}>
           <Reveal>
             <h2 style={{ fontSize: "32px", fontWeight: "600", marginBottom: "20px" }}>{t("products", "slidingInWall")}</h2>
             <p style={{ fontSize: "18px", color: "var(--text-secondary)", lineHeight: "1.7", marginBottom: "30px" }}>
               {t("products", "slidingInWallDesc")}
             </p>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px" }}>
+            <div className="product-features-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px" }}>
               <div style={{ padding: "20px", background: "#f9f9f9", borderRadius: "8px" }}>
                 <h4 style={{ fontSize: "16px", marginBottom: "10px" }}>{t("products", "spaceSaving")}</h4>
                 <p style={{ fontSize: "14px", opacity: 0.7 }}>100% foydali maydon</p>
@@ -54,13 +54,14 @@ export default function SlidingDoorsPage() {
             <img 
               src="/images/cassette.png" 
               alt="Cassette System Detail" 
+              className="detail-img"
               style={{ width: "100%", height: "auto", borderRadius: "12px", boxShadow: "0 10px 30px rgba(0,0,0,0.05)" }}
             />
           </Reveal>
         </div>
 
         <Reveal>
-          <div style={{ background: "#000", color: "#fff", padding: "80px", borderRadius: "24px", marginBottom: "80px", textAlign: "center" }}>
+          <div className="black-card" style={{ background: "#000", color: "#fff", padding: "80px", borderRadius: "24px", marginBottom: "80px", textAlign: "center" }}>
             <h2 style={{ fontSize: "40px", marginBottom: "20px" }}>{t("products", "slidingOnWall")}</h2>
             <p style={{ fontSize: "18px", opacity: 0.8, maxWidth: "700px", margin: "0 auto 40px" }}>
               {t("products", "slidingOnWallDesc")}
@@ -68,6 +69,7 @@ export default function SlidingDoorsPage() {
             <img 
               src="/images/suriladigan.png" 
               alt="Sliding System" 
+              className="onwall-img"
               style={{ width: "100%", maxHeight: "500px", objectFit: "contain" }}
             />
           </div>
