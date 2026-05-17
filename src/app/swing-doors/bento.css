@@ -1,0 +1,371 @@
+.bento-wrapper {
+  background-color: #dfdfdf;
+  padding: 40px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  font-family: var(--font-inter), sans-serif;
+}
+
+.bento-container {
+  width: 100%;
+  max-width: 1400px;
+  background-color: #ffffff;
+  border-radius: 60px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bento-hero {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  border-radius: 40px;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.bento-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 40px;
+}
+
+/* Glass Navigation inside Hero */
+.glass-nav {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 60px);
+  max-width: 1200px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  z-index: 100;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.6), 0 10px 35px rgba(0,0,0,0.06);
+}
+
+.glass-nav .logo {
+  color: #0b0b0b;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  text-decoration: none;
+}
+
+.glass-nav .nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.glass-nav .nav-links a {
+  color: rgba(11, 11, 11, 0.6);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+.glass-nav .nav-links a:hover, .glass-nav .nav-links a.active {
+  color: #000;
+}
+
+.glass-nav .lang-switch {
+  display: flex;
+  gap: 10px;
+}
+
+.glass-nav .lang-switch button {
+  background: none;
+  border: none;
+  color: rgba(11, 11, 11, 0.4);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 5px;
+  transition: color 0.3s;
+}
+
+.glass-nav .lang-switch button.active, .glass-nav .lang-switch button:hover {
+  color: #000;
+}
+
+/* Cutout wrappers */
+.hero-cutout {
+  position: absolute;
+  background-color: #ffffff;
+  z-index: 2;
+}
+
+/* Top Left */
+.cutout-tl {
+  top: 0;
+  left: 0;
+  width: 110px;
+  height: 110px;
+  border-bottom-right-radius: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.cutout-tl::after {
+  content: ''; position: absolute; top: 0; left: 100%; width: 40px; height: 40px; background: transparent; border-top-left-radius: 40px; box-shadow: -20px -20px 0 20px #ffffff;
+}
+.cutout-tl::before {
+  content: ''; position: absolute; top: 100%; left: 0; width: 40px; height: 40px; background: transparent; border-top-left-radius: 40px; box-shadow: -20px -20px 0 20px #ffffff;
+}
+
+/* Top Right */
+.cutout-tr {
+  top: 0;
+  right: 0;
+  width: 110px;
+  height: 110px;
+  border-bottom-left-radius: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.cutout-tr::after {
+  content: ''; position: absolute; top: 0; right: 100%; width: 40px; height: 40px; background: transparent; border-top-right-radius: 40px; box-shadow: 20px -20px 0 20px #ffffff;
+}
+.cutout-tr::before {
+  content: ''; position: absolute; top: 100%; right: 0; width: 40px; height: 40px; background: transparent; border-top-right-radius: 40px; box-shadow: 20px -20px 0 20px #ffffff;
+}
+
+/* Bottom Center */
+.cutout-bc {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160px;
+  height: 80px;
+  border-top-left-radius: 80px;
+  border-top-right-radius: 80px;
+}
+.cutout-bc::after {
+  content: ''; position: absolute; bottom: 0; right: 100%; width: 40px; height: 40px; background: transparent; border-bottom-right-radius: 40px; box-shadow: 20px 20px 0 20px #ffffff;
+}
+.cutout-bc::before {
+  content: ''; position: absolute; bottom: 0; left: 100%; width: 40px; height: 40px; background: transparent; border-bottom-left-radius: 40px; box-shadow: -20px 20px 0 20px #ffffff;
+}
+
+/* Buttons inside cutouts */
+.top-btn {
+  width: 80px;
+  height: 80px;
+  background-color: #0b0b0b;
+  border-radius: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s;
+  text-decoration: none;
+}
+.top-btn:hover {
+  transform: scale(1.05);
+}
+.logo-text {
+  font-weight: 800;
+  font-size: 24px;
+  letter-spacing: -1px;
+}
+
+/* Center Badge */
+.center-badge {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 140px;
+  background-color: #0b0b0b;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.2), 0 10px 30px rgba(0,0,0,0.3);
+  text-align: center;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: transform 0.3s ease;
+}
+.center-badge:hover {
+  transform: translateX(-50%) scale(1.05);
+}
+
+/* Bottom Section */
+.bottom-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Left Column */
+.left-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.text-block {
+  flex-grow: 1;
+  background-color: #ffffff;
+  padding: 40px 20px 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bento-title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -2px;
+  margin-bottom: 24px;
+  color: #000;
+}
+
+.bento-desc {
+  font-size: 16px;
+  color: #666;
+  max-width: 400px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+.consult-btn {
+  background-color: #0b0b0b;
+  color: #fff;
+  padding: 18px 36px;
+  border-radius: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  width: max-content;
+  text-decoration: none;
+  margin-bottom: 40px;
+  transition: opacity 0.3s;
+}
+.consult-btn:hover {
+  opacity: 0.8;
+}
+
+.socials {
+  display: flex;
+  gap: 15px;
+}
+.social-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  transition: all 0.3s;
+  background: #fff;
+}
+.social-icon:hover {
+  background: #000;
+  color: #fff;
+}
+
+.small-cards-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  height: 250px;
+}
+
+.bento-img-card {
+  position: relative;
+  border-radius: 40px;
+  overflow: hidden;
+  background: #f5f5f5;
+  height: 100%;
+}
+.bento-img-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+.bento-img-card:hover img {
+  transform: scale(1.05);
+}
+.bento-img-card .label {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Right Column */
+.right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.right-col .bento-img-card {
+  flex: 1;
+}
+
+@media (max-width: 1024px) {
+  .bottom-section {
+    grid-template-columns: 1fr;
+  }
+  .bento-hero { height: 600px; }
+  .right-col { height: 600px; }
+  .text-block { padding: 20px 0; }
+}
+
+@media (max-width: 600px) {
+  .bento-wrapper { padding: 10px; }
+  .bento-container { padding: 10px; border-radius: 30px; }
+  .bento-hero { border-radius: 20px; height: 450px; }
+  .cutout-tl, .cutout-tr { width: 80px; height: 80px; }
+  .top-btn { width: 50px; height: 50px; border-radius: 15px; }
+  .bento-title { font-size: 40px; }
+  .small-cards-row { grid-template-columns: 1fr; height: auto; }
+  .small-cards-row .bento-img-card { height: 200px; }
+  .right-col { height: auto; }
+  .right-col .bento-img-card { height: 250px; }
+  
+  /* Simplify cutouts on mobile */
+  .cutout-tl::after, .cutout-tl::before,
+  .cutout-tr::after, .cutout-tr::before,
+  .cutout-bc::after, .cutout-bc::before { display: none; }
+  .center-badge { width: 100px; height: 100px; bottom: 10px; font-size: 9px; }
+  .cutout-bc { width: 120px; height: 60px; }
+}

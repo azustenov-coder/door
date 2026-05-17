@@ -18,19 +18,17 @@ export default function Header() {
     { href: "/projects", label: t("nav", "projects") },
   ];
 
-  if (!mounted) return (
-    <header className="header">
-      <div className="header-inner">
-        <div className="logo"><strong>Unio</strong>doors</div>
-      </div>
-    </header>
-  );
+  if (!mounted) return null;
+
+  if (pathname === "/swing-doors" || pathname === "/sliding-doors") {
+    return null;
+  }
 
   return (
     <header className="header">
       <div className="header-inner">
         <Link href="/" className="logo">
-          <strong>Unio</strong>doors
+          <strong>Union</strong>doors
         </Link>
 
         <nav className="top-nav">

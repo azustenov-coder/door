@@ -54,7 +54,7 @@ export async function POST(request) {
       const welcomeText = `
 👋 *Assalomu alaykum!*
 
-Unio Doors - professional yashirin eshiklar tizimlariga xush kelibsiz.
+Union Doors - professional yashirin eshiklar tizimlariga xush kelibsiz.
 Quyidagi tugmalar orqali biz bilan bog'lanishingiz yoki saytimizni ko'rishingiz mumkin:
       `;
 
