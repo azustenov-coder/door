@@ -4,10 +4,21 @@ import { useState, useEffect } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import Reveal from "@/components/Reveal";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import "./bento-sliding.css";
 
 export default function SlidingDoorsPage() {
   const { t, mounted, locale, changeLanguage } = useLanguage();
+  const pathname = usePathname();
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const navLinks = [
+    { href: "/", label: t("nav", "home") },
+    { href: "/swing-doors", label: t("nav", "swingDoors") },
+    { href: "/sliding-doors", label: t("nav", "slidingDoors") },
+    { href: "/accessories", label: t("nav", "accessories") },
+    { href: "/projects", label: t("nav", "projects") },
+  ];
 
   // Automatic hero image slider
   const heroImages = [
@@ -59,11 +70,15 @@ export default function SlidingDoorsPage() {
               </Link>
               
               <div className="nav-links">
-                <Link href="/">{t("nav", "home")}</Link>
-                <Link href="/swing-doors">{t("nav", "swingDoors")}</Link>
-                <Link href="/sliding-doors" className="active">{t("nav", "slidingDoors")}</Link>
-                <Link href="/accessories">{t("nav", "accessories")}</Link>
-                <Link href="/projects">{t("nav", "projects")}</Link>
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={pathname === link.href ? "active" : ""}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
               </div>
 
               <div className="lang-switch">
@@ -77,7 +92,52 @@ export default function SlidingDoorsPage() {
                   </button>
                 ))}
               </div>
+
+              {/* Hamburger Button for Mobile */}
+              <button 
+                className={`glass-mobile-toggle ${mobileOpen ? 'active' : ''}`}
+                onClick={() => setMobileOpen(!mobileOpen)}
+                aria-label="Toggle Menu"
+              >
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
             </div>
+
+            {/* Mobile Menu Overlay for Glass Nav */}
+            {mobileOpen && (
+              <div className="glass-mobile-menu">
+                <ul className="glass-mobile-nav-links">
+                  {navLinks.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        onClick={() => setMobileOpen(false)}
+                        className={pathname === link.href ? "active" : ""}
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+                
+                <div className="glass-mobile-lang-switch">
+                  {["uz", "en", "ru"].map((lang) => (
+                    <button
+                      key={lang}
+                      onClick={() => {
+                        changeLanguage(lang);
+                        setMobileOpen(false);
+                      }}
+                      className={locale === lang ? "active" : ""}
+                    >
+                      {lang}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* Floating Info Details on Hero */}
             <div className="hero-overlay-details">
