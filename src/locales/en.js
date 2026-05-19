@@ -90,5 +90,21 @@ export const en = {
     subtitle: "Contact our experts today for a free consultation and personalized quote.",
     button1: "Telegram",
     button2: "Call Now"
+  },
+  accessoriesShowcase: {
+    title: "MODERN DESIGNS.\nEFFORTLESS COMFORT.\nLASTING QUALITY.",
+    description: "Contemporary accessories crafted for your lifestyle, designed to bring effortless elegance into your everyday spaces.",
+    tooltip1: "Premium materials",
+    tooltip2: "Natural finish",
+    tag1: "Long-lasting",
+    tag2: "Best quality",
+    tag3: "Dustproof",
+    tag4: "Soft cushioning",
+    tag5: "Elegant design"
+  },
+  doorViewer: {
+    oneWeek: "1 Week",
+    bestseller: "Bestseller",
+    doorTitle: "Hidden doors EKOTREND with aluminum black frame"
   }
 };

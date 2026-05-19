@@ -5,6 +5,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import Reveal from "@/components/Reveal";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import InteractiveDoorViewer from "@/components/InteractiveDoorViewer";
 import "./bento.css";
 
 export default function SwingDoorsPage() {
@@ -234,6 +235,14 @@ export default function SwingDoorsPage() {
           </div>
 
         </div>
+
+        {/* Interactive Door Viewer Section */}
+        <div style={{ padding: '60px 0', backgroundColor: '#f9f9f9', marginTop: '40px', borderRadius: '40px' }}>
+          <Reveal>
+            <InteractiveDoorViewer />
+          </Reveal>
+        </div>
+
       </div>
     </div>
   );

@@ -90,5 +90,21 @@ export const uz = {
     subtitle: "Bepul maslahat va shaxsiy narx taklifini olish uchun bugun mutaxassislarimiz bilan bog'laning.",
     button1: "Telegram",
     button2: "Hozir qo'ng'iroq qiling"
+  },
+  accessoriesShowcase: {
+    title: "ZAMONAVIY DIZAYN.\nQULAYLIK.\nPREMIUM SIFAT.",
+    description: "Sizning interyeringiz uchun zamonaviy aksessuarlar. Har kungi foydalanish uchun mukammallik va qulaylik uyg'unligi.",
+    tooltip1: "Premium materiallar",
+    tooltip2: "Tabiiy jilo",
+    tag1: "Uzoq muddatli",
+    tag2: "Eng yaxshi sifat",
+    tag3: "Zanglamaydigan",
+    tag4: "Yumshoq yopilish",
+    tag5: "Elegant dizayn"
+  },
+  doorViewer: {
+    oneWeek: "1 Hafta",
+    bestseller: "Xit savdo",
+    doorTitle: "Qora alyuminiy ramkali EKOTREND yashirin eshiklari"
   }
 };

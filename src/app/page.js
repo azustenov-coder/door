@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import Reveal from "@/components/Reveal";
 import BeforeAfter from "@/components/BeforeAfter";
+import TeamSection from "@/components/TeamSection";
 
 export default function HomePage() {
   const { t, mounted } = useLanguage();
@@ -139,6 +140,10 @@ export default function HomePage() {
           </div>
         </Reveal>
       </section>
+
+      {/* Team Section */}
+      <TeamSection />
+      
     </div>
   );
 }
